@@ -5,7 +5,7 @@ data "aws_ami" "centos" {
 }
 
 resource "aws_instance" "frontend" {
-  ami           = "data.aws_ami.centos.image_id"
+  ami           = data.aws_ami.centos.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -14,7 +14,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_instance" "MongoDB" {
-  ami           = "data.aws_ami.centos.image_id"
+  ami           = data.aws_ami.centos.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -23,7 +23,7 @@ resource "aws_instance" "MongoDB" {
 }
 
 resource "aws_instance" "Catalogue" {
-  ami           = "data.aws_ami.centos.image_id"
+  ami           = data.aws_ami.centos.image_id
   instance_type = "t3.micro"
 
   tags = {
@@ -32,7 +32,7 @@ resource "aws_instance" "Catalogue" {
 }
 
 resource "aws_instance" "Redis" {
-  ami           = "data.aws_ami.centos.image_id"
+  ami           = data.aws_ami.centos.image_id
   instance_type = "t3.micro"
 
   tags = {

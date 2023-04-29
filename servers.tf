@@ -3,12 +3,9 @@ data "aws_ami" "centos" {
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
 }
-output "ami" {
-  value = data.aws_ami.centos.image_id
-}
 
 resource "aws_instance" "frontend" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = "data.aws_ami.centos.image_id"
   instance_type = "t3.micro"
 
   tags = {
@@ -21,7 +18,7 @@ output "frontend" {
 }
 
 resource "aws_instance" "MongoDB" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = "data.aws_ami.centos.image_id"
   instance_type = "t3.micro"
 
   tags = {
@@ -30,7 +27,7 @@ resource "aws_instance" "MongoDB" {
 }
 
 resource "aws_instance" "Catalogue" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = "data.aws_ami.centos.image_id"
   instance_type = "t3.micro"
 
   tags = {
@@ -39,7 +36,7 @@ resource "aws_instance" "Catalogue" {
 }
 
 resource "aws_instance" "Redis" {
-  ami           = "ami-0b5a2b5b8f2be4ec2"
+  ami           = "data.aws_ami.centos.image_id"
   instance_type = "t3.micro"
 
   tags = {

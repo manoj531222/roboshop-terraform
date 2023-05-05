@@ -22,7 +22,7 @@ resource "null_resource" "provisioner" {
 
     inline = [
       "rm -rf roboshop-shell",
-      "git clone https://github.com/mdevops333/roboshop-shell",
+      "git clone https://github.com/manoj531222/roboshop-terraform.git",
       "cd roboshop-shell",
       "sudo bash ${var.component_name}.sh ${var.password}"
     ]

@@ -12,7 +12,13 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
-
+resource "aws_route53_record" "frontend" {
+  zone_id = "Z0514347LLZOA0DD7NAB"
+  name    = "frontend-dev.mdevops333.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.frontend.private_ip]
+}
 
 resource "aws_instance" "mongodb" {
   ami           = data.aws_ami.centos.image_id

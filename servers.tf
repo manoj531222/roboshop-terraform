@@ -8,7 +8,7 @@ resource "aws_instance" "frontend" {
 }
 
 output "frontend" {
-  value = aws_instance.frontend.public_ip
+  value = aws_instance.frontend.ami
 }
 #
 #resource "aws_instance" "mongodb" {

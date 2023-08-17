@@ -73,4 +73,4 @@ resource "aws_instance" "machines" {
 #  ttl     = 30
 #  records = [aws_instance.frontend.private_ip]
 #}
-}
+#}

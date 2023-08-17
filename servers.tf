@@ -16,16 +16,15 @@ variable "components" {
 }
 
 resource "aws_instance" "instance" {
-  count         = length(var.components)
-  ami           = data.aws_ami.centos.image_id
-  instance_type = var.instance_type
-  vpc_security_group_ids = [ data.aws_security_group.allow-all.id ]
+  count                  = length(var.components)
+  ami                    = data.aws_ami.centos.image_id
+  instance_type          = var.instance_type
+  vpc_security_group_ids = [data.aws_security_group.allow-all.id]
+
+  tags = {
+    Name = var.components[count.index]
+  }
 }
-
-
-#  tags = {
-#    Name = var.components[count.index]
-#  }
 #
 #resource "aws_route53_record" "frontend" {
 #  zone_id = "Z0514347LLZOA0DD7NAB"

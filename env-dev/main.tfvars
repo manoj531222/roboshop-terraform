@@ -23,10 +23,12 @@ components = {
   rabbitmq = {
     name = "rabbitmq"
     instance_type = "t2.micro"
+    password = "roboshop123"
   }
   payment = {
     name = "payment"
     instance_type = "t2.micro"
+    password = "roboshop123"
   }
   redis = {
     name = "redis"
@@ -35,10 +37,12 @@ components = {
   mysql = {
     name = "mysql"
     instance_type = "t2.micro"
+    password = "RoboShop@1"
   }
   shipping = {
     name = "shipping"
     instance_type = "t2.micro"
+    password = "RoboShop@1"
   }
 }
 

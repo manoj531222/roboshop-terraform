@@ -7,6 +7,7 @@ resource "aws_instance" "instance" {
     Name = var.component_name
   }
 }
+
 resource "null_resource" "provisioner" {
 
   depends_on = [aws_instance.instance, aws_route53_record.records]
@@ -21,17 +22,17 @@ resource "null_resource" "provisioner" {
 
     inline = [
       "rm -rf roboshop-shell",
-      "git clone https://github.com/manoj531222/roboshop-shell.git",
+      "git clone https://github.com/raghudevopsb72/roboshop-shell",
       "cd roboshop-shell",
       "sudo bash ${var.component_name}.sh ${var.password}"
-
     ]
   }
 }
 
+
 resource "aws_route53_record" "records" {
-  zone_id = "Z0514347LLZOA0DD7NAB"
-  name    = "${var.component_name}-dev.mdevops333.online"
+  zone_id = "Z03986262CQPCHNJNZM9L"
+  name    = "${var.component_name}-dev.rdevopsb72.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance.private_ip]

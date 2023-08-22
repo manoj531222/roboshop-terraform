@@ -1,4 +1,4 @@
-database_servers = {
+app_servers = {
 
   frontend = {
     name          = "frontend"
@@ -31,7 +31,7 @@ database_servers = {
 
   }
 }
-app_servers = {
+database_servers = {
 
   rabbitmq = {
     name          = "rabbitmq"

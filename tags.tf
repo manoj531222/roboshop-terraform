@@ -1,8 +1,8 @@
 locals {
   tags = {
-    project = "roboshop"
+    project       = "roboshop"
     business_type = "retail"
     business_unit = "ecommerce"
-    env = var.env
+    env           = var.env
   }
 }

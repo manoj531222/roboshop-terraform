@@ -8,6 +8,21 @@ vpc = {
         cidr_block = ["10.0.0.0/24" , "10.0.1.0/24"]
         azs = ["us-east-1a" , "us-east-1b"]
       }
+      public = {
+        name = "wed"
+        cidr_block = ["10.0.0.0/24" , "10.0.1.0/24"]
+        azs = ["us-east-1a" , "us-east-1b"]
+      }
+      public = {
+        name = "db"
+        cidr_block = ["10.0.0.0/24" , "10.0.1.0/24"]
+        azs = ["us-east-1a" , "us-east-1b"]
+      }
+      public = {
+        name = "app"
+        cidr_block = ["10.0.0.0/24" , "10.0.1.0/24"]
+        azs = ["us-east-1a" , "us-east-1b"]
+      }
     }
   }
 }

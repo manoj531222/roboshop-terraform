@@ -22,6 +22,9 @@ module "app" {
   env          = var.env
   bastion_cidr = var.bastion_cidr
   tags = local.tags
+  default_vpc_id = var.default_vpc_id
+  default_vpc_cidr = var.default_vpc_cidr
+  default_vpc_rtid = var.default_vpc_rtid
 
   subnet_ids     = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null)
   vpc_id         = lookup(lookup(module.vpc, "main", null), "vpc_id", null)

@@ -83,25 +83,25 @@ docdb = {
     instance_class = "db.t3.medium"
   }
 }
-
-rds = {
-  main = {
-    subnet_name    = "db"
-    allow_db_cidr  = "app"
-    engine_version = "5.7.mysql_aurora.2.11.2"
-    instance_count = 1
-    instance_class = "db.t3.medium"
-  }
-}
-
-elasticache = {
-  main = {
-    subnet_name             = "db"
-    allow_db_cidr           = "app"
-    engine_version          = "6.x"
-    replicas_per_node_group = 1
-    num_node_groups         = 1
-    node_type               = "cache.t3.micro"
-  }
-}
+#
+#rds = {
+#  main = {
+#    subnet_name    = "db"
+#    allow_db_cidr  = "app"
+#    engine_version = "5.7.mysql_aurora.2.11.2"
+#    instance_count = 1
+#    instance_class = "db.t3.medium"
+#  }
+#}
+#
+#elasticache = {
+#  main = {
+#    subnet_name             = "db"
+#    allow_db_cidr           = "app"
+#    engine_version          = "6.x"
+#    replicas_per_node_group = 1
+#    num_node_groups         = 1
+#    node_type               = "cache.t3.micro"
+#  }
+#}
 

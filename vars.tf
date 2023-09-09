@@ -9,7 +9,7 @@ variable "docdb" {}
 variable "kms_arn" {}
 variable "rds" {}
 variable "elasticache" {}
-variable "domain_id" {}
+
 
 
 

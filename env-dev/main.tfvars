@@ -4,9 +4,6 @@ default_vpc_id = "vpc-04223682d4f7cf906"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-009d3adb090d7ed6e"
 kms_arn          = "arn:aws:kms:us-east-1:693381842268:key/9242f01f-6223-4487-a1e0-4607d8e4ee3d"
-domain_name      = "mdevops333.online"
-domain_id        = "Z0514347LLZOA0DD7NAB"
-
 
 vpc = {
   main = {
@@ -46,9 +43,6 @@ app = {
     max_size           = 5
     min_size           = 1
     app_port           = 80
-    listener_priority = 1
-    lb_type         = "public"
-    dns_name        = "dev"
   }
   catalogue = {
     name          = "catalogue"
@@ -59,29 +53,27 @@ app = {
     max_size           = 5
     min_size           = 1
     app_port           = 8080
-    listener_priority = 1
-    lb_type         = "private"
   }
-#  user = {
-#    name          = "user"
-#    instance_type = "t3.small"
-#    subnet_name   = "app"
-#  }
-#  cart = {
-#    name          = "cart"
-#    instance_type = "t3.small"
-#    subnet_name   = "app"
-#  }
-#  payment = {
-#    name          = "payment"
-#    instance_type = "t3.small"
-#    subnet_name   = "app"
-#  }
-#  shipping = {
-#    name          = "shipping"
-#    instance_type = "t3.small"
-#    subnet_name   = "app"
-#  }
+  #  user = {
+  #    name          = "user"
+  #    instance_type = "t3.small"
+  #    subnet_name   = "app"
+  #  }
+  #  cart = {
+  #    name          = "cart"
+  #    instance_type = "t3.small"
+  #    subnet_name   = "app"
+  #  }
+  #  payment = {
+  #    name          = "payment"
+  #    instance_type = "t3.small"
+  #    subnet_name   = "app"
+  #  }
+  #  shipping = {
+  #    name          = "shipping"
+  #    instance_type = "t3.small"
+  #    subnet_name   = "app"
+  #  }
 }
 
 docdb = {
@@ -137,4 +129,3 @@ alb = {
     internal       = true
   }
 }
-

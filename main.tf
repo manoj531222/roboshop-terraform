@@ -119,6 +119,6 @@ module "app" {
   env          = var.env
   bastion_cidr = var.bastion_cidr
   tags = local.tags
-  domine_name = var.domain_name
+  domain_name = var.domain_name
   domain_id    = var.domain_id
 }
